@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.postgresql:pljava-api:1.5.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/postgresql/pljava-api/1.5.1-SNAPSHOT/pljava-api-1.5.1-20170202.133213-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/postgresql/pljava-api/1.5.1-SNAPSHOT/pljava-api-1.5.1-20170202.133213-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/postgresql/pljava-api/1.5.1-SNAPSHOT/pljava-api-1.5.1-20170202.133213-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
