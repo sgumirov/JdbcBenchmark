@@ -52,7 +52,7 @@ public class Benchmark {
       int id = r.nextInt(max-1)+1;
       pst.setInt(1, id);
       ResultSet rs = pst.executeQuery();
-      if (!rs.first()) throw new RuntimeException("No data at id="+id);
+      if (!rs.next()) throw new RuntimeException("No data at id="+id);
       avg = (avg + rs.getInt(2))>>1;
     }
 
