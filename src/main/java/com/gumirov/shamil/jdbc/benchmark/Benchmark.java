@@ -17,8 +17,8 @@ public class Benchmark {
   public static String url = "jdbc:default:connection";
   
   @Function
-  public static String fillTable(String tName, int start, int end) throws SQLException {
-    System.out.println("fillTable(): "+start+", "+end);
+  public static String fillTable(String tName, int startPos, int endPos) throws SQLException {
+    System.out.println("fillTable(): "+startPos+", "+endPos);
     
     long t = System.currentTimeMillis();
 
@@ -26,7 +26,7 @@ public class Benchmark {
 
     PreparedStatement pst = con.prepareStatement(String.format(insert, tName));
 
-    for (int i = start; i < end; ++i){
+    for (int i = startPos; i < endPos; ++i){
       pst.setInt(1, i);
       pst.setInt(2, i);
       pst.executeUpdate();
@@ -41,8 +41,8 @@ public class Benchmark {
   }
 
   @Function
-  public static String randomReads(String tName, int number, int max) throws SQLException {
-    System.out.println("randomReads(): "+number+", "+max);
+  public static String randomReads(String tName, int totalNum, int maxVal) throws SQLException {
+    System.out.println("randomReads(): "+totalNum+", "+maxVal);
     
     long t = System.currentTimeMillis();
 
@@ -52,8 +52,8 @@ public class Benchmark {
     Random r = new Random(System.currentTimeMillis());
     int avg = 0;
 
-    for (int i = 0; i < number; ++i){
-      int id = r.nextInt(max-1)+1;
+    for (int i = 0; i < totalNum; ++i){
+      int id = r.nextInt(maxVal-1)+1;
       pst.setInt(1, id);
       ResultSet rs = pst.executeQuery();
       if (!rs.next()) throw new RuntimeException("No data at id="+id);
