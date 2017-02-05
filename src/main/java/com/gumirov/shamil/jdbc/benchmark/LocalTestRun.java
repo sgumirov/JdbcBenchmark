@@ -23,7 +23,7 @@ public class LocalTestRun{
     final int MAX = 100;
     System.out.println("Starting Mysql test..");
     System.out.println(Benchmark.fillTable(table, 1, MAX));
-    System.out.println(Benchmark.randomReads(table, 10000, MAX));
+    System.out.println(Benchmark.randomReads(table, 100000, MAX));
     Benchmark.cleanTable(table);
   }
 
@@ -33,7 +33,7 @@ public class LocalTestRun{
     final int MAX = 100;
     System.out.println("Starting Postgres test..");
     System.out.println(Benchmark.fillTable(table, 1, MAX));
-    System.out.println(Benchmark.randomReads(table, 10000, MAX));
+    System.out.println(Benchmark.randomReads(table, 100000, MAX));
     Benchmark.cleanTable(table);
   }
 }

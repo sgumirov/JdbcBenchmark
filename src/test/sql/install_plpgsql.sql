@@ -16,11 +16,8 @@ BEGIN
   END IF;
       
   EndTime := clock_timestamp();
-  --Delta := 1000 * ( extract(epoch from EndTime) - extract(epoch from StartTime) );
-    Delta := clock_timestamp() - StartTime;
+  Delta := clock_timestamp() - StartTime;
 
-  --RAISE NOTICE 'Duration in millisecs=%', Delta;
-  
   ret := 'Duration in millisecs=' || Cast(Delta As text);
       
   RETURN ret; 
@@ -28,7 +25,7 @@ END;
 $$
 LANGUAGE 'plpgsql' VOLATILE;
 
-CREATE OR REPLACE FUNCTION randomReadS(num integer)
+CREATE OR REPLACE FUNCTION randomReadS(numb integer, maxnum integer)
   RETURNS text AS
 $$
 DECLARE
@@ -43,9 +40,9 @@ BEGIN
   StartTime := clock_timestamp();
 
   IF num > 0 THEN
-    FOR i IN 1 .. num LOOP
+    FOR i IN 1 .. numb LOOP
       --INSERT INTO test_table(id,val) VALUES(i, i);
-      ri := round(random()*99)+1;
+      ri := round(random()*(maxnum-1))+1;
       SELECT val INTO v FROM test_table WHERE id = ri;
       avg := (avg + v) / 2;
       v := i;
@@ -53,9 +50,7 @@ BEGIN
   END IF;
       
   EndTime := clock_timestamp();
-  --Delta := 1000 * ( extract(epoch from EndTime) - extract(epoch from StartTime) );
   Delta := clock_timestamp() - StartTime;
-  --RAISE NOTICE 'Duration in millisecs=%', Delta;
   
   ret := 'Total ops = '||v||'. Average = ' || avg || '. Duration in millisecs = ' || Cast(Delta As text);
       
