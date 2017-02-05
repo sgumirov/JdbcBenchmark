@@ -1,0 +1,1 @@
+psql test < src/test/sql/exec.sql

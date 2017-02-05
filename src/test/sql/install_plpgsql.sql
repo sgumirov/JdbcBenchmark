@@ -5,6 +5,7 @@ DECLARE
   StartTime timestamptz;
   EndTime timestamptz;
   Delta interval;
+  ret text;
 BEGIN
   StartTime := clock_timestamp();
 
