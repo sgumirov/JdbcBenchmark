@@ -1,6 +1,15 @@
 SQLActions[]={
 "BEGIN INSTALL
 BEGIN PostgreSQL
+CREATE OR REPLACE FUNCTION randomReads(
+	table varchar,
+	number integer,
+	max integer)
+	RETURNS varchar
+	LANGUAGE java VOLATILE
+	AS 'com.gumirov.shamil.jdbc.benchmark.Benchmark.randomReads(java.lang.String,int,int)'
+END PostgreSQL;
+BEGIN PostgreSQL
 CREATE OR REPLACE FUNCTION fillTable(
 	table varchar,
 	start integer,
@@ -16,23 +25,8 @@ CREATE OR REPLACE FUNCTION cleanTable(
 	LANGUAGE java VOLATILE
 	AS 'com.gumirov.shamil.jdbc.benchmark.Benchmark.cleanTable(java.lang.String)'
 END PostgreSQL;
-BEGIN PostgreSQL
-CREATE OR REPLACE FUNCTION randomReads(
-	table varchar,
-	number integer,
-	max integer)
-	RETURNS varchar
-	LANGUAGE java VOLATILE
-	AS 'com.gumirov.shamil.jdbc.benchmark.Benchmark.randomReads(java.lang.String,int,int)'
-END PostgreSQL;
 END INSTALL",
 "BEGIN REMOVE
-BEGIN PostgreSQL
-DROP FUNCTION randomReads(
-	table varchar,
-	number integer,
-	max integer)
-END PostgreSQL;
 BEGIN PostgreSQL
 DROP FUNCTION cleanTable(
 	table varchar)
@@ -42,6 +36,12 @@ DROP FUNCTION fillTable(
 	table varchar,
 	start integer,
 	end integer)
+END PostgreSQL;
+BEGIN PostgreSQL
+DROP FUNCTION randomReads(
+	table varchar,
+	number integer,
+	max integer)
 END PostgreSQL;
 END REMOVE"
 }

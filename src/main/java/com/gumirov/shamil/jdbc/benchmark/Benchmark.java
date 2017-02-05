@@ -18,6 +18,8 @@ public class Benchmark {
   
   @Function
   public static String fillTable(String table, int start, int end) throws SQLException {
+    System.out.println("fillTable(): "+start+", "+end);
+    
     long t = System.currentTimeMillis();
 
     Connection con = DriverManager.getConnection(url);
@@ -40,6 +42,8 @@ public class Benchmark {
 
   @Function
   public static String randomReads(String table, int number, int max) throws SQLException {
+    System.out.println("randomReads(): "+number+", "+max);
+    
     long t = System.currentTimeMillis();
 
     Connection con = DriverManager.getConnection(url);
@@ -66,6 +70,9 @@ public class Benchmark {
 
   @Function
   public static String cleanTable(String table) throws SQLException {
+
+    System.out.println("cleanTable()");
+    
     long t = System.currentTimeMillis();
 
     Connection con = DriverManager.getConnection(url);

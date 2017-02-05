@@ -7,8 +7,14 @@ import java.sql.SQLException;
  */
 public class LocalTestRun{
   public static void main(String[] args) throws SQLException {
-//    mysqlTest();
-    postgresTest();
+    boolean mysql = false, postgres = false;
+    for (int i = 0; i < args.length; i++) {
+      String arg = args[i];
+      if ("-m".equals(arg)) mysql = true;
+      if ("-p".equals(arg)) postgres = true;
+    }
+    if (mysql) mysqlTest();
+    if (postgres) postgresTest();
   }
 
   private static void mysqlTest() throws SQLException {
