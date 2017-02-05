@@ -20,7 +20,7 @@ BEGIN
   
   ret := 'Duration in millisecs=' || Cast(Delta As text);
       
-  RETURN 
+  RETURN ret; 
 END;
 $$
 LANGUAGE 'plpgsql' VOLATILE;
