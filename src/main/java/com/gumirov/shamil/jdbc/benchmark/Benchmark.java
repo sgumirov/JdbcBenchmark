@@ -17,14 +17,14 @@ public class Benchmark {
   public static String url = "jdbc:default:connection";
   
   @Function
-  public static String fillTable(String table, int start, int end) throws SQLException {
+  public static String fillTable(String tName, int start, int end) throws SQLException {
     System.out.println("fillTable(): "+start+", "+end);
     
     long t = System.currentTimeMillis();
 
     Connection con = DriverManager.getConnection(url);
 
-    PreparedStatement pst = con.prepareStatement(String.format(insert, table));
+    PreparedStatement pst = con.prepareStatement(String.format(insert, tName));
 
     for (int i = start; i < end; ++i){
       pst.setInt(1, i);
@@ -41,14 +41,14 @@ public class Benchmark {
   }
 
   @Function
-  public static String randomReads(String table, int number, int max) throws SQLException {
+  public static String randomReads(String tName, int number, int max) throws SQLException {
     System.out.println("randomReads(): "+number+", "+max);
     
     long t = System.currentTimeMillis();
 
     Connection con = DriverManager.getConnection(url);
 
-    PreparedStatement pst = con.prepareStatement(String.format(select, table));
+    PreparedStatement pst = con.prepareStatement(String.format(select, tName));
     Random r = new Random(System.currentTimeMillis());
     int avg = 0;
 
@@ -69,7 +69,7 @@ public class Benchmark {
   }
 
   @Function
-  public static String cleanTable(String table) throws SQLException {
+  public static String cleanTable(String tName) throws SQLException {
 
     System.out.println("cleanTable()");
     
@@ -78,7 +78,7 @@ public class Benchmark {
     Connection con = DriverManager.getConnection(url);
 
     Statement s = con.createStatement();
-    s.executeUpdate(String.format(delete, table));
+    s.executeUpdate(String.format(delete, tName));
     
     s.close();
     con.close();

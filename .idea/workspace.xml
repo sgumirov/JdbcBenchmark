@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5628c20c-39de-4d39-8a16-efe56468d828" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/sql/exec.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/sql/install.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JdbcBenchmark-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/JdbcBenchmark-1.0-SNAPSHOT-jar-with-dependencies.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/JdbcBenchmark-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/JdbcBenchmark-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java" afterPath="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java" afterPath="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="install.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/sql/install.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -65,14 +59,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Benchmark.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Benchmark.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="199">
+              <caret line="71" column="46" lean-forward="false" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1486291949333" expanded="true" signature="231:257" ph=" INSERT statement" />
+                <marker date="1486299919429" expanded="true" signature="231:257" ph=" INSERT statement" />
               </folding>
             </state>
           </provider>
@@ -87,6 +81,11 @@
         <option value="SQL Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>table</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,11 +106,11 @@
         <option value="$PROJECT_DIR$/src/main/java/Benchmark.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/fis/benchmark/Benchmark.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/fis/benchmark/LocalTestRun.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java" />
         <option value="$PROJECT_DIR$/src/test/sql/install.sql" />
         <option value="$PROJECT_DIR$/src/test/sql/exec.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java" />
       </list>
     </option>
   </component>
@@ -641,29 +640,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1486291949333" expanded="true" signature="231:257" ph=" INSERT statement" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -681,6 +661,25 @@
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="71" column="46" lean-forward="false" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1486299919429" expanded="true" signature="231:257" ph=" INSERT statement" />
+          </folding>
         </state>
       </provider>
     </entry>
