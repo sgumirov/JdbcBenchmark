@@ -59,6 +59,7 @@ public class Benchmark {
       ResultSet rs = pst.executeQuery();
       if (!rs.next()) throw new RuntimeException("No data at id="+id);
       avg = (avg + rs.getInt(2))/2;
+      rs.close();
     }
 
     t = System.currentTimeMillis() - t;
@@ -66,7 +67,7 @@ public class Benchmark {
     pst.close();
     con.close();
 
-    return "Avg = "+avg+". Time used: "+t+" ms";
+    return "Num = "+totalNum+". Avg = "+avg+". Time used: "+t+" ms";
   }
 
   @Function
@@ -88,6 +89,7 @@ public class Benchmark {
       ResultSet rs = st.executeQuery(q.replace("?", ""+id));
       if (!rs.next()) throw new RuntimeException("No data at id="+id);
       avg = (avg + rs.getInt(2))/2;
+      rs.close();
     }
 
     t = System.currentTimeMillis() - t;
@@ -95,7 +97,7 @@ public class Benchmark {
     st.close();
     con.close();
 
-    return "Avg = "+avg+". Time used: "+t+" ms";
+    return "Num = "+totalNum+" Avg = "+avg+". Time used: "+t+" ms";
   }
 
   @Function

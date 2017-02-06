@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5628c20c-39de-4d39-8a16-efe56468d828" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/sql/exec.sql" afterPath="$PROJECT_DIR$/src/test/sql/exec.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java" afterPath="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,8 +32,8 @@
       <file leaf-file-name="LocalTestRun.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -43,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/sql/install.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,24 +59,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exec.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="exec.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/sql/exec.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Benchmark.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Benchmark.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="529">
+              <caret line="91" column="17" lean-forward="false" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1486379302570" expanded="true" signature="231:257" ph=" INSERT statement" />
+                <marker date="1486384156429" expanded="true" signature="231:257" ph=" INSERT statement" />
               </folding>
             </state>
           </provider>
@@ -140,10 +140,10 @@
         <option value="$PROJECT_DIR$/src/test/python/install.sql" />
         <option value="$PROJECT_DIR$/src/test/sql/exec_plpgsql.sql" />
         <option value="$PROJECT_DIR$/src/test/sql/install_plpgsql.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java" />
         <option value="$PROJECT_DIR$/src/test/sql/install.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java" />
         <option value="$PROJECT_DIR$/src/test/sql/exec.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java" />
       </list>
     </option>
   </component>
@@ -709,7 +709,7 @@
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1486379302570" expanded="true" signature="231:257" ph=" INSERT statement" />
+            <marker date="1486384156429" expanded="true" signature="231:257" ph=" INSERT statement" />
           </folding>
         </state>
       </provider>
@@ -768,7 +768,7 @@
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1486379302570" expanded="true" signature="231:257" ph=" INSERT statement" />
+            <marker date="1486384156429" expanded="true" signature="231:257" ph=" INSERT statement" />
           </folding>
         </state>
       </provider>
@@ -804,26 +804,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1486379302570" expanded="true" signature="231:257" ph=" INSERT statement" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/sql/install.sql">
+    <entry file="file://$PROJECT_DIR$/src/test/sql/replace.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/sql/replace.sql">
+    <entry file="file://$PROJECT_DIR$/src/test/sql/exec.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -839,19 +828,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java">
+    <entry file="file://$PROJECT_DIR$/src/test/sql/install.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/sql/exec.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        <state relative-caret-position="289">
+          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="91" column="17" lean-forward="false" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1486384156429" expanded="true" signature="231:257" ph=" INSERT statement" />
+          </folding>
         </state>
       </provider>
     </entry>
