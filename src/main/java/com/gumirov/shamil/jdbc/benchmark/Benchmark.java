@@ -44,13 +44,14 @@ public class Benchmark {
   public static String randomReads(String tName, int totalNum, int maxVal) throws SQLException {
     System.out.println("randomReads(): "+totalNum+", "+maxVal);
     
-    long t = System.currentTimeMillis();
 
     Connection con = DriverManager.getConnection(url);
 
     PreparedStatement pst = con.prepareStatement(String.format(select, tName));
     Random r = new Random(System.currentTimeMillis());
     int avg = 0;
+
+    long t = System.currentTimeMillis();
 
     for (int i = 0; i < totalNum; ++i){
       int id = r.nextInt(maxVal-1)+1;
@@ -60,10 +61,10 @@ public class Benchmark {
       avg = (avg + rs.getInt(2))>>1;
     }
 
+    t = System.currentTimeMillis() - t;
+
     pst.close();
     con.close();
-    
-    t = System.currentTimeMillis() - t;
 
     return "Avg = "+avg+". Time used: "+t+" ms";
   }
