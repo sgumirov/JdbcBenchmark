@@ -40,14 +40,15 @@ DECLARE
   v integer;
   avg integer := 0;
 BEGIN
-    StartTime := clock_timestamp();
+  StartTime := clock_timestamp();
 
   IF num > 0 THEN
     FOR i IN 1 .. num LOOP
       --INSERT INTO test_table(id,val) VALUES(i, i);
       ri := round(random()*99)+1;
       SELECT val INTO v FROM test_table WHERE id = ri;
-      avg := (avg + v) / 2;  
+      avg := (avg + v) / 2;
+      v := i;
     END LOOP;
   END IF;
       
@@ -56,7 +57,7 @@ BEGIN
   Delta := clock_timestamp() - StartTime;
   --RAISE NOTICE 'Duration in millisecs=%', Delta;
   
-  ret := 'Average = ' || avg || '. Duration in millisecs = ' || Cast(Delta As text);
+  ret := 'Total ops = '||v||'. Average = ' || avg || '. Duration in millisecs = ' || Cast(Delta As text);
       
   RETURN ret; 
 END;
