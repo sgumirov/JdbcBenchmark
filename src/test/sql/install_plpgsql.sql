@@ -16,7 +16,9 @@ BEGIN
   END IF;
       
   EndTime := clock_timestamp();
-  Delta := 1000 * ( extract(epoch from EndTime) - extract(epoch from StartTime) );
+  --Delta := 1000 * ( extract(epoch from EndTime) - extract(epoch from StartTime) );
+    Delta := clock_timestamp() - StartTime;
+
   --RAISE NOTICE 'Duration in millisecs=%', Delta;
   
   ret := 'Duration in millisecs=' || Cast(Delta As text);
