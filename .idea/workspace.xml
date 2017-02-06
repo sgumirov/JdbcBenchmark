@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5628c20c-39de-4d39-8a16-efe56468d828" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java" afterPath="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/sql/exec.sql" afterPath="$PROJECT_DIR$/src/test/sql/exec.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,8 +62,8 @@
       <file leaf-file-name="exec.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/sql/exec.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -142,8 +142,8 @@
         <option value="$PROJECT_DIR$/src/test/sql/install_plpgsql.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/Benchmark.java" />
         <option value="$PROJECT_DIR$/src/test/sql/install.sql" />
-        <option value="$PROJECT_DIR$/src/test/sql/exec.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/gumirov/shamil/jdbc/benchmark/LocalTestRun.java" />
+        <option value="$PROJECT_DIR$/src/test/sql/exec.sql" />
       </list>
     </option>
   </component>
@@ -849,8 +849,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/sql/exec.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
           <folding />
         </state>
       </provider>
