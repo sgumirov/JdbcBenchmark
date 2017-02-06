@@ -10,13 +10,6 @@ CREATE OR REPLACE FUNCTION randomReads(
 	AS 'com.gumirov.shamil.jdbc.benchmark.Benchmark.randomReads(java.lang.String,int,int)'
 END PostgreSQL;
 BEGIN PostgreSQL
-CREATE OR REPLACE FUNCTION cleanTable(
-	tName varchar)
-	RETURNS varchar
-	LANGUAGE java VOLATILE
-	AS 'com.gumirov.shamil.jdbc.benchmark.Benchmark.cleanTable(java.lang.String)'
-END PostgreSQL;
-BEGIN PostgreSQL
 CREATE OR REPLACE FUNCTION fillTable(
 	tName varchar,
 	startPos integer,
@@ -25,17 +18,24 @@ CREATE OR REPLACE FUNCTION fillTable(
 	LANGUAGE java VOLATILE
 	AS 'com.gumirov.shamil.jdbc.benchmark.Benchmark.fillTable(java.lang.String,int,int)'
 END PostgreSQL;
+BEGIN PostgreSQL
+CREATE OR REPLACE FUNCTION cleanTable(
+	tName varchar)
+	RETURNS varchar
+	LANGUAGE java VOLATILE
+	AS 'com.gumirov.shamil.jdbc.benchmark.Benchmark.cleanTable(java.lang.String)'
+END PostgreSQL;
 END INSTALL",
 "BEGIN REMOVE
+BEGIN PostgreSQL
+DROP FUNCTION cleanTable(
+	tName varchar)
+END PostgreSQL;
 BEGIN PostgreSQL
 DROP FUNCTION fillTable(
 	tName varchar,
 	startPos integer,
 	endPos integer)
-END PostgreSQL;
-BEGIN PostgreSQL
-DROP FUNCTION cleanTable(
-	tName varchar)
 END PostgreSQL;
 BEGIN PostgreSQL
 DROP FUNCTION randomReads(
