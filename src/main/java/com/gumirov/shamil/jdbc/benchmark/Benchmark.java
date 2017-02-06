@@ -58,12 +58,41 @@ public class Benchmark {
       pst.setInt(1, id);
       ResultSet rs = pst.executeQuery();
       if (!rs.next()) throw new RuntimeException("No data at id="+id);
-      avg = (avg + rs.getInt(2))>>1;
+      avg = (avg + rs.getInt(2))/2;
     }
 
     t = System.currentTimeMillis() - t;
 
     pst.close();
+    con.close();
+
+    return "Avg = "+avg+". Time used: "+t+" ms";
+  }
+
+  @Function
+  public static String randomReadsNoPrep(String tName, int totalNum, int maxVal) throws SQLException {
+    System.out.println("randomReadsNoPrep(): "+totalNum+", "+maxVal);
+    
+
+    Connection con = DriverManager.getConnection(url);
+
+    Statement st = con.createStatement();
+    Random r = new Random(System.currentTimeMillis());
+    int avg = 0;
+    String q = String.format(select, tName);
+
+    long t = System.currentTimeMillis();
+
+    for (int i = 0; i < totalNum; ++i){
+      int id = r.nextInt(maxVal-1)+1;
+      ResultSet rs = st.executeQuery(q.replace("?", ""+id));
+      if (!rs.next()) throw new RuntimeException("No data at id="+id);
+      avg = (avg + rs.getInt(2))/2;
+    }
+
+    t = System.currentTimeMillis() - t;
+
+    st.close();
     con.close();
 
     return "Avg = "+avg+". Time used: "+t+" ms";
