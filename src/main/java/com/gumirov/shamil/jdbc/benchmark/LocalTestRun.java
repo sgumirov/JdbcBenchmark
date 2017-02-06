@@ -34,6 +34,7 @@ public class LocalTestRun{
     System.out.println("Starting Postgres test..");
     System.out.println(Benchmark.fillTable(table, 1, MAX));
     System.out.println(Benchmark.randomReads(table, 100000, MAX));
+    System.out.println(Benchmark.randomReadsNoPrep(table, 100000, MAX));
     Benchmark.cleanTable(table);
   }
 }
