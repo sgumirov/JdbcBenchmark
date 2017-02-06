@@ -38,7 +38,7 @@ DECLARE
   v integer;
   avg integer := 0;
 BEGIN
-  StartTime := clock_timestamp();
+    StartTime := clock_timestamp();
 
   IF num > 0 THEN
     FOR i IN 1 .. num LOOP
@@ -50,7 +50,8 @@ BEGIN
   END IF;
       
   EndTime := clock_timestamp();
-  Delta := 1000 * ( extract(epoch from EndTime) - extract(epoch from StartTime) );
+  --Delta := 1000 * ( extract(epoch from EndTime) - extract(epoch from StartTime) );
+  Delta := clock_timestamp() - StartTime;
   --RAISE NOTICE 'Duration in millisecs=%', Delta;
   
   ret := 'Average = ' || avg || '. Duration in millisecs = ' || Cast(Delta As text);
